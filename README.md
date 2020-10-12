@@ -12,7 +12,7 @@ And a gripper is operated by a human hand gesture.
 ![시스템 구상도2](https://user-images.githubusercontent.com/60131899/95708960-976d0a00-0c98-11eb-9fc4-d20ca56bdbd3.png)
 
 **RQT graph Summary**
-
+![rqt요약](https://user-images.githubusercontent.com/60131899/95709508-bd46de80-0c99-11eb-85ed-f48bd84180ad.PNG)
 
 
 **Development Environment and Equipment**
