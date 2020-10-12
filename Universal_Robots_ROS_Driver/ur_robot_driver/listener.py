@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import rospy
+from ros_myo.msg import MyoArm, MyoPose, EmgArray
+from std_msgs.msg import String
+
+def callback(data):
+    rospy.loginfo("send data : %s", data.data)
+    
+def listener():
+
+    # In ROS, nodes are uniquely named. If two nodes with the same
+    # name are launched, the previous one is kicked off. The
+    # anonymous=True flag means that rospy will choose a unique
+    # name for our 'listener' node so that multiple listeners can
+    # run simultaneously.
+    rospy.init_node('listener', anonymous=True)
+
+    rospy.Subscriber("/myo_raw/myo_emg", EmgArray, callback)
+
+    # spin() simply keeps python from exiting until this node is stopped
+    rospy.spin()
+
+if __name__ == '__main__':
+    listener()
