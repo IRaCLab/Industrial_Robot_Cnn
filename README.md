@@ -8,6 +8,11 @@ The robot arm moves in the same direction as the human movement.
 And a gripper is operated by a human hand gesture.
 
 
+**System Structure**
+![시스템 구상도2](https://user-images.githubusercontent.com/60131899/95708960-976d0a00-0c98-11eb-9fc4-d20ca56bdbd3.png)
+
+
+
 **Development Environment and Equipment**
 
 
@@ -29,14 +34,25 @@ Sensor : Myo armband (Thalmic Labs)
 
 $ roscore
 
+$ rosrun ros_myo myo-rawNode.py
+
+$ rosrun ur_robot_driver listener3.py
+
+(Virtual environment based on Python 3.6 version)
+$ python pred-echo-server.py
+
 $ roslaunch ur_robot_driver ur3_bringup.launch robot_ip:= (input_your_ip)
 
-$ rosrun ros_myo myo-rawNode.py
+$ rosrun ur_robot_driver uremg.py
 
 $ rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyUSB0
 
 $ rosrun robotiq_2f_gripper_control Robotiq2FGripperStatusListener.py
 
+(Virtual environment based on Python 2.7 version)
 $ rosrun robotiq_2f_gripper_control Robotiq2FGripperSimpleController2.py
 
-$ rosrun ur_robot_driver RemoteControl_UR3_2to3.py
+
+Make your gesture !
+
+
