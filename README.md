@@ -8,7 +8,7 @@ The robot arm moves in the same direction as the human movement.
 And a gripper is operated by a human hand gesture.
 
 
-**System Structure**
+****System Structure****
 ![시스템 구상도2](https://user-images.githubusercontent.com/60131899/95708960-976d0a00-0c98-11eb-9fc4-d20ca56bdbd3.png)
 
 
