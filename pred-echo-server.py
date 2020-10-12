@@ -54,7 +54,7 @@ while True:
         
         # 2. 
 
-        model = tf.keras.models.load_model('5set3_8.h5')
+        model = tf.keras.models.load_model('Gesture_Classifier.h5')
 
         # 3. 
         yhat = model.predict_classes(X_test)
